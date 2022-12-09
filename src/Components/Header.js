@@ -20,6 +20,7 @@ const darkTheme = createTheme({
       main: "#fff",
     },
     type: "dark",
+    color: "gold",
   },
 });
 
@@ -54,10 +55,13 @@ const Header = () => {
             </Typography>
             <Select
               variant="outlined"
+              // className={classes.title}
               style={{
-                widht: 100,
+                background: "gold",
+                // width: 100,
                 height: 40,
                 marginLeft: 15,
+                color: "gold",
               }}
               onChange={(e) => setCurrency(e.target.value)}
             >

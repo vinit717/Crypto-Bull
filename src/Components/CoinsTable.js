@@ -90,6 +90,17 @@ const CoinsTable = () => {
           Cryptocurrency Prices by Market Cap
         </Typography>
         <TextField
+          sx={{
+            "& .MuiFormLabel-root": {
+              color: "secondary.main",
+            },
+            "& .MuiFormLabel-root.Mui-focused": {
+              color: "primary.main",
+            },
+            "& .MuiInputBase-root": {
+              color: "primary.main",
+            },
+          }}
           label="Search For a Crypto Currency.."
           variant="outlined"
           style={{ marginBottom: 20, width: "100%", color: "white" }}
@@ -127,6 +138,9 @@ const CoinsTable = () => {
                         onClick={() => history(`/coins/${row.id}`)}
                         className={classes.row}
                         key={row.name}
+                        style={{
+                          color: "gold",
+                        }}
                       >
                         <TableCell
                           component="th"
@@ -134,6 +148,7 @@ const CoinsTable = () => {
                           style={{
                             display: "flex",
                             gap: 15,
+                            color: "gold",
                           }}
                         >
                           <img
@@ -159,7 +174,12 @@ const CoinsTable = () => {
                           </div>
                         </TableCell>
 
-                        <TableCell align="right">
+                        <TableCell
+                          align="right"
+                          style={{
+                            color: "gold",
+                          }}
+                        >
                           {symbol}{" "}
                           {numberWithCommas(row.current_price.toFixed(2))}
                         </TableCell>
@@ -175,7 +195,12 @@ const CoinsTable = () => {
                           {row.price_change_percentage_24h.toFixed(2)}%
                         </TableCell>
 
-                        <TableCell align="right">
+                        <TableCell
+                          align="right"
+                          style={{
+                            color: "gold",
+                          }}
+                        >
                           {symbol}{" "}
                           {numberWithCommas(
                             row.market_cap.toString().slice(0, -6)
@@ -196,6 +221,8 @@ const CoinsTable = () => {
             width: "100%",
             display: "flex",
             justifyContent: "center",
+            color: "gold",
+            backgroundColor: "gold",
           }}
           classes={{ ul: classes.pagination }}
           onChange={(_, value) => {
