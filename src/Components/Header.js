@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@material-ui/styles";
+// import { ThemeProvider } from "@material-ui/styles";
 import { makeStyles } from "tss-react/mui";
 import {
   AppBar,
@@ -8,20 +8,11 @@ import {
   Select,
   MenuItem,
   createTheme,
+  ThemeProvider,
 } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
-
-const useStyles = makeStyles()(() => ({
-  title: {
-    flex: 1,
-    color: "gold",
-    fontFamily: "Montserrat",
-    fontWeight: "bold",
-    cursor: "pointer",
-  },
-}));
 
 const darkTheme = createTheme({
   palette: {
@@ -33,12 +24,21 @@ const darkTheme = createTheme({
 });
 
 const Header = () => {
+  const useStyles = makeStyles()((theme) => ({
+    title: {
+      flex: 1,
+      color: "gold",
+      fontFamily: "Montserrat",
+      fontWeight: "bold",
+      cursor: "pointer",
+    },
+  }));
   const { classes } = useStyles();
 
   const navigate = useNavigate();
   const { currency, setCurrency } = CryptoState();
 
-  console.log(currency);
+  // console.log(currency);
 
   return (
     <ThemeProvider theme={darkTheme}>

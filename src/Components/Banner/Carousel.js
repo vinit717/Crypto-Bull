@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/styles";
+// import { makeStyles } from "@material-ui/styles";
 import { TrendingCoins } from "../../config/api";
 import axios from "axios";
 import { CryptoState } from "../../CryptoContext";
 import AliceCarousel from "react-alice-carousel";
 import { Link } from "react-router-dom";
+import { makeStyles } from "tss-react/mui";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles()((theme) => ({
   carousel: {
     height: "50%",
     display: "flex",
@@ -29,7 +30,7 @@ export function numberWithCommas(x) {
 
 const Carousel = () => {
   const [trending, setTrending] = useState([]);
-  const classes = useStyles();
+  const { classes } = useStyles();
   const { currency, symbol } = CryptoState();
 
   const fetchTrendingCoins = async () => {
