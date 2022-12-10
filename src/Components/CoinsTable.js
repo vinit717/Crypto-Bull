@@ -21,21 +21,21 @@ import { CryptoState } from "../CryptoContext";
 import { numberWithCommas } from "./Banner/Carousel";
 
 const CoinsTable = () => {
-  const [coins, setCoins] = useState([]);
-  const [loading, setLoading] = useState(false);
+  // const [coins, setCoins] = useState([]);
+  // const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
 
-  const { currency, symbol } = CryptoState();
+  const { currency, symbol, coins, loading, fetchCoins } = CryptoState();
 
-  const fetchCoins = async () => {
-    setLoading(true);
-    const { data } = await axios.get(CoinList(currency));
-    console.log(data);
+  // const fetchCoins = async () => {
+  //   setLoading(true);
+  //   const { data } = await axios.get(CoinList(currency));
+  //   console.log(data);
 
-    setCoins(data);
-    setLoading(false);
-  };
+  //   setCoins(data);
+  //   setLoading(false);
+  // };
 
   useEffect(() => {
     fetchCoins();
@@ -92,13 +92,13 @@ const CoinsTable = () => {
         <TextField
           sx={{
             "& .MuiFormLabel-root": {
-              color: "secondary.main",
+              color: "gold",
             },
             "& .MuiFormLabel-root.Mui-focused": {
               color: "primary.main",
             },
             "& .MuiInputBase-root": {
-              color: "primary.main",
+              color: "gold",
             },
           }}
           label="Search For a Crypto Currency.."

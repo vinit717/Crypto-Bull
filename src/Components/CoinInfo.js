@@ -9,7 +9,7 @@ import { chartDays } from "../config/data";
 import SelectButton from "./SelectButton";
 // import { CategoryScale, Chart as ChartJS, LinearScale } from "chart.js";
 // import Chart from "react-chartjs-2";
-// import { Line } from "react-chartjs-2";
+
 import {
   Chart as ChartJS,
   LineElement,
