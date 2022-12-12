@@ -12,6 +12,7 @@ import GoogleButton from "react-google-button";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../firebase";
 import { makeStyles } from "@material-ui/core";
+import { CryptoState } from "../../CryptoContext";
 
 const style = {
   position: "absolute",
@@ -52,6 +53,7 @@ export default function AuthModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const { setAlert } = CryptoState();
 
   const [value, setValue] = React.useState(0);
 
