@@ -18,6 +18,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     fontFamily: "monospace",
+    background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
   },
   profile: {
     flex: 1,

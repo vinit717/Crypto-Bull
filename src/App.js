@@ -8,7 +8,8 @@ import Alerts from "./Components/Alert";
 
 const useStyles = makeStyles(() => ({
   App: {
-    backgroundColor: "#14161a",
+    // backgroundColor: "#14161a",
+    background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
     color: "white",
     minHeight: "100vh",
   },

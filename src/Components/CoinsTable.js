@@ -63,7 +63,7 @@ const CoinsTable = () => {
 
   const useStyles = makeStyles({
     row: {
-      backgroundColor: "#16171a",
+      backgroundColor: "#fff",
       cursor: "pointer",
       "&:hover": {
         backgroundColor: "#131111",
