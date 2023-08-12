@@ -2,8 +2,6 @@
 
 Welcome to CryptoBull! This project features an impressive crypto dashboard that allows users to track their cryptocurrency portfolio and check prices in both INR and USD. The site leverages Firebase for data storage and integrates Google Auth for seamless user account management.
 
-![image](https://github.com/vinit717/Crypto-Bull/assets/111434418/037c185d-61f7-45dc-8224-aa5c34449d95)
-
 ## Features
 
 - **User Authentication:** Sign up and log in with Google for a smooth onboarding experience.
