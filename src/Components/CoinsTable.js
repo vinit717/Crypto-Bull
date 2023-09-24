@@ -135,7 +135,6 @@ const CoinsTable = () => {
                     const profit = row.price_change_percentage_24h > 0;
                     return (
                       <TableRow
-                        onClick={() => history(`/coins/${row.id}`)}
                         className={classes.row}
                         key={row.name}
                         style={{
@@ -143,12 +142,14 @@ const CoinsTable = () => {
                         }}
                       >
                         <TableCell
+                        onClick={() => history(`/coins/${row.id}`)}
                           component="th"
                           scope="row"
                           style={{
                             display: "flex",
                             gap: 15,
                             color: "gold",
+                            cursor: 'pointer',
                           }}
                         >
                           <img
